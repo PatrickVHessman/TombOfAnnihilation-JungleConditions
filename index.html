@@ -1,0 +1,84 @@
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+<script src="jungleConditionsScripts.js"></script>
+
+<script>
+ var output = "";
+	output = jungleConditionsGeneratorDefault(output);
+	document.getElementById("jungleWeather").innerHTML = output.weather;
+	document.getElementById("jungleTerrain").innerHTML = output.terrain;
+	document.getElementById("morningEncounter").innerHTML = output.morningEncounter;
+	document.getElementById("middayEncounter").innerHTML = output.middayEncounter;
+	document.getElementById("nightEncounter").innerHTML = output.nightEncounter;
+
+
+$( "#jungleConditionsButton" ).click(function() {
+	var output = "";
+	output = jungleConditionsGenerator(output);
+
+	
+	document.getElementById("jungleWeather").innerHTML = output.weather;
+	document.getElementById("jungleTerrain").innerHTML = output.terrain;
+	document.getElementById("morningEncounter").innerHTML = output.morningEncounter;
+	document.getElementById("middayEncounter").innerHTML = output.middayEncounter;
+	document.getElementById("nightEncounter").innerHTML = output.nightEncounter;
+	
+});
+	
+
+
+	
+
+
+</script>
+  
+  <p>Use this tool to generate travel conditions for the jungle navigation segment of Tomb of Annihilation's second chapter or any other adventures in Chult!</p>
+  
+  <h3>Area Terrain</h3>
+  Beach
+  <input type="radio" name="terrainForm" value="beach" isChecked="false"/><br/>
+  Jungle (No Undead)
+<input type="radio" name="terrainForm" value="jungle-noUndead" isChecked="false"/><br/>
+Jungle (Lesser Undead)
+<input type="radio" name="terrainForm" value="jungle-lesserUndead" isChecked="false"/><br/>
+ 
+ Jungle (Greater Undead)
+<input type="radio" name="terrainForm" value="jungle-greaterUndead" isChecked="false"/><br/>
+  
+  Mountains
+  <input type="radio" name="terrainForm" value="mountains" isChecked="false"/><br/>
+  
+  Rivers
+  <input type="radio" name="terrainForm" value="rivers" isChecked="false"/><br/>
+  
+  Ruins
+  <input type="radio" name="terrainForm" value="ruins" isChecked="false"/><br/>
+  
+  Swamp
+  <input type="radio" name="terrainForm" value="swamp" isChecked="false"/><br/>
+  
+  Wasteland
+  <input type="radio" name="terrainForm" value="wasteland" isChecked="false"/><br/>
+  
+  <!-- Omu
+  <input type="radio" name="terrainForm" value="omu" isChecked="false"/><br/> -->
+  
+
+ 
+
+<p id="jungleConditionsButton" style="cursor:pointer"><strong>GENERATE JUNGLE CONDITIONS!</strong></p>
+
+<!--<p><span id="jungleConditions"></span></p> -->
+
+<strong>Weather:</strong> <span id="jungleWeather"></span>
+<br/> 
+<strong>Terrain:</strong> <span id="jungleTerrain"></span>
+<br/>
+<strong>Morning Encounter:</strong> <span id="morningEncounter"></span>
+<br/>
+<strong>Mid Day Encounter:</strong> <span id="middayEncounter"></span>
+<br/> 
+<strong>Night Encounter:</strong> <span id="nightEncounter"></span>
+
+
+

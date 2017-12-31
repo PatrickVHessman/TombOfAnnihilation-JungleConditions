@@ -1,0 +1,12 @@
+# Changelog
+All notable changes to this project will be documented in this file.
+
+## [Unreleased]
+- CSS styling of HTML file
+- Encounter generator for traveling in the city of Omu
+- Encounter generator for the city of Port Nyanzaru
+- Option to reduce or raise frequency of wilderness encounters
+
+## [0.1.0] - 2017-12-30
+### Added
+- Initial build of HTML file and associated scripts
