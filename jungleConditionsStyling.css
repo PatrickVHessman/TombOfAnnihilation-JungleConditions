@@ -102,3 +102,9 @@ body {
 #jungleConditionsButton:hover {
 	background-color: rgb(189, 42, 42);
 }
+
+footer {
+    font-size: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
