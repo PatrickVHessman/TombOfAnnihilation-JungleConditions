@@ -244,7 +244,7 @@ return value;
 
 // Lesser Undead Encounter
 function lesserUndeadEncounter(value) {
-	"use strict";
+	
 var randomNumber = Math.floor(Math.random()*100+1);
 switch(randomNumber) {
 	case 1: value =  "Albino dwarf warriors X " + Math.floor(Math.random()*4+4);
@@ -289,8 +289,7 @@ break;
 break;
 	case 29: value = "Giant wasp X " + Math.floor(Math.random()*6+1);
 break;
-	case 30: 
-break;		
+	case 30: 		
 	case 31: value = "Girallon X 2";
 break;		
 	case 32: 
@@ -319,13 +318,12 @@ break;
 break;
 	case 49: value = "Giant constrictor snake X 1";
 break;
-	case 50:value = "Giant poisonous snake X 1";
+	case 50: value = "Giant poisonous snake X 1";
 break;		
 	case 51: 
 	case 52: value = "Giant spider X " + Math.floor(Math.random()*6+1); break;
 	case 53: 
-	case 54: 
-break;		
+	case 54: 		
 	case 55: value = statueOfUbtaoGenerator(value);
 break;		
 	case 56:  
@@ -407,7 +405,7 @@ switch(randomNumber) {
 	case 6: value = "Allosaurus X " + Math.floor(Math.random()*3+1); break;	
 	case 7: value = "Ankylosaurus X 1"; break;		
 	case 8: value = "Hadrosaurus X " + Math.floor(Math.random()*18+1); break;		
-	case 9: value = "Pteranodon X " + Math.floor(Math.random()*12+1); break		
+	case 9: value = "Pteranodon X " + Math.floor(Math.random()*12+1); break;		
 	case 10: value = "Stegosaurus X 1"; break;		
 	case 11: 		
 	case 12: value = "Tyrannosaurus X 1"; break;		
@@ -1148,7 +1146,7 @@ function statueOfUbtaoGenerator(value) {
 	if (treasure === "No treasure") {
 		treasure = "worthless pieces of bone jewelry";
 	}
-	else {
+	
 		
 		switch(randomNumber) {
 		case 1: 
@@ -1156,13 +1154,13 @@ function statueOfUbtaoGenerator(value) {
 			break;
 		case 2: 
 			value = "Statue of Ubtao with a pile of grung, goblin, and su-monster skulls lying at the base"; break;
-		case 3: value = "Statue of Ubtao with a <em>glyph of warding</em> inscribed on it, spotted by a DC 15 investigation check. If touched, the glyph erupts in a 20-foot square. Creatures must succeed on a DC 14 Dexterity saving throw or take " + Math.floor(Math.random()*40+1); + " damage on a failed save, or half as much on a successful one."; break;
+		case 3: value = "Statue of Ubtao with a <em>glyph of warding</em> inscribed on it, spotted by a DC 15 investigation check. If touched, the glyph erupts in a 20-foot square. Creatures must succeed on a DC 14 Dexterity saving throw or take " + Math.floor(Math.random()*40+1) + " damage on a failed save, or half as much on a successful one."; break;
 		case 4: 
 			value = "Statue of Ubtao inscribed with a maze solved with a DC 10 Intelligence check, rewarding the character with the power to cast the spell <em>find the path</em> as an action once per day";
 			break;
 		
 		
-	}}
+	}
 	
 	return value;
 	}
@@ -1421,7 +1419,7 @@ break;
 	case 71: 
 	case 72: value = "Potion of animal friendship"; break;		
 	case 73:  
-	case 74: "Potion of vitality"; break;		
+	case 74: value = "Potion of vitality"; break;		
 	case 75: 
 	case 76: value = "First level spell scroll";
 break; 

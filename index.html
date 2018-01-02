@@ -1,64 +1,67 @@
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-<script src="jungleConditionsScripts.js"></script>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Dungeons and Dragons - Tomb of Annihilation Travel Conditions Generator</title>
 
-<script>
- var output = "";
-	output = jungleConditionsGeneratorDefault(output);
-	document.getElementById("jungleWeather").innerHTML = output.weather;
-	document.getElementById("jungleTerrain").innerHTML = output.terrain;
-	document.getElementById("morningEncounter").innerHTML = output.morningEncounter;
-	document.getElementById("middayEncounter").innerHTML = output.middayEncounter;
-	document.getElementById("nightEncounter").innerHTML = output.nightEncounter;
+</head>
+<link href="bootstrap.min.css" type="text/css" rel="stylesheet"/>
+<link href="jungleConditionsStyling.css" rel="stylesheet" type="text/css">
+	<script src="bootstrap.min.js" ></script>
+<body>
 
-
-$( "#jungleConditionsButton" ).click(function() {
-	var output = "";
-	output = jungleConditionsGenerator(output);
-
-	
-	document.getElementById("jungleWeather").innerHTML = output.weather;
-	document.getElementById("jungleTerrain").innerHTML = output.terrain;
-	document.getElementById("morningEncounter").innerHTML = output.morningEncounter;
-	document.getElementById("middayEncounter").innerHTML = output.middayEncounter;
-	document.getElementById("nightEncounter").innerHTML = output.nightEncounter;
-	
-});
-	
-
-
-	
-
-
-</script>
+  <div class="appContainer">
   
-  <p>Use this tool to generate travel conditions for the jungle navigation segment of Tomb of Annihilation's second chapter or any other adventures in Chult!</p>
+  <h3>Tomb of Annihilation Jungle Travel Conditions Generator</h3>
+  <p>Use this tool to generate travel conditions for the jungle navigation segment of <em>Tomb of Annihilation</em>'s second chapter or any other adventures in Chult!</p>
   
-  <h3>Area Terrain</h3>
-  Beach
-  <input type="radio" name="terrainForm" value="beach" isChecked="false"/><br/>
-  Jungle (No Undead)
-<input type="radio" name="terrainForm" value="jungle-noUndead" isChecked="false"/><br/>
-Jungle (Lesser Undead)
-<input type="radio" name="terrainForm" value="jungle-lesserUndead" isChecked="false"/><br/>
+ <strong>Area Terrain</strong><br/><br/>
+ <div class="row">
+  <div class="col-md-4">
+  
+  <label class="container">Jungle (No Undead)
+<input type="radio" name="terrainForm" value="jungle-noUndead" isChecked="false"/>
+<span class="checkmark"></span></label>
+<label class="container">Jungle (Lesser Undead)
+<input type="radio" name="terrainForm" value="jungle-lesserUndead" isChecked="false"/><span class="checkmark"></span>
+</label>
+<label class="container">Jungle (Greater Undead)
+<input type="radio" name="terrainForm" value="jungle-greaterUndead" isChecked="false"/>
+<span class="checkmark"></span></label>
+</div>
  
- Jungle (Greater Undead)
-<input type="radio" name="terrainForm" value="jungle-greaterUndead" isChecked="false"/><br/>
+ <div class="col-md-4">
+ 
   
-  Mountains
-  <input type="radio" name="terrainForm" value="mountains" isChecked="false"/><br/>
+  <label class="container">Beach
+  <input type="radio" name="terrainForm" value="beach" isChecked="false"/>
+<span class="checkmark"></span></label>
   
-  Rivers
-  <input type="radio" name="terrainForm" value="rivers" isChecked="false"/><br/>
+  <label class="container">Mountains
+  <input type="radio" name="terrainForm" value="mountains" isChecked="false"/>
+<span class="checkmark"></span></label>
   
-  Ruins
-  <input type="radio" name="terrainForm" value="ruins" isChecked="false"/><br/>
+  <label class="container">Rivers
+  <input type="radio" name="terrainForm" value="rivers" isChecked="false"/>
+	  <span class="checkmark"></span></label></div>
   
-  Swamp
-  <input type="radio" name="terrainForm" value="swamp" isChecked="false"/><br/>
+  <div class="col-md-4">
+  <label class="container">Ruins
+  <input type="radio" name="terrainForm" value="ruins" isChecked="false"/>
+	  <span class="checkmark"></span></label>
   
-  Wasteland
-  <input type="radio" name="terrainForm" value="wasteland" isChecked="false"/><br/>
+  
+  <label class="container">Swamp
+  <input type="radio" name="terrainForm" value="swamp" isChecked="false"/>
+<span class="checkmark"></span></label>
+  
+  <label class="container">Wasteland
+  <input type="radio" name="terrainForm" value="wasteland" isChecked="false"/>
+	  <span class="checkmark"></span></label></div>
+
+</div>
+ 
+ <br/>
   
   <!-- Omu
   <input type="radio" name="terrainForm" value="omu" isChecked="false"/><br/> -->
@@ -66,7 +69,7 @@ Jungle (Lesser Undead)
 
  
 
-<p id="jungleConditionsButton" style="cursor:pointer"><strong>GENERATE JUNGLE CONDITIONS!</strong></p>
+<p style="text-align: center"><span id="jungleConditionsButton" style="cursor:pointer"><strong>GENERATE JUNGLE CONDITIONS</strong></span></p>
 
 <!--<p><span id="jungleConditions"></span></p> -->
 
@@ -79,6 +82,13 @@ Jungle (Lesser Undead)
 <strong>Mid Day Encounter:</strong> <span id="middayEncounter"></span>
 <br/> 
 <strong>Night Encounter:</strong> <span id="nightEncounter"></span>
+</div>
 
 
+<script src="jquery-1.10.2.js"></script>
 
+<script src="jungleConditionsScripts.js"></script>
+
+
+</body>
+</html>
