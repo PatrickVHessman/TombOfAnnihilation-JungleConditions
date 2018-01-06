@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file.
 ## [Unreleased]
 - Encounter generator for traveling in the city of Omu
 - Encounter generator for the city of Port Nyanzaru
-- Option to reduce or raise frequency of wilderness encounters
 
 ## [0.1.0] - 2017-12-30
 ### Added
@@ -15,3 +14,9 @@ All notable changes to this project will be documented in this file.
 - CSS styling of HTML
 ### Fixed
 - Error with encounter variables returning as "undefined"
+
+## [0.3.0] - 2018-01-06
+### Added
+- Option to reduce or raise frequency of wilderness encounters
+### Changed
+- User interface improvements

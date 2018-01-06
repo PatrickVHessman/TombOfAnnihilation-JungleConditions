@@ -1547,11 +1547,11 @@ break;
 
 // ENCOUNTER FUNCTIONS
 // Encounter Generator
-function encounterGenerator(value,terrainValue) {
+function encounterGenerator(value,terrainValue,frequencyNum) {
 
 var encounterNumber = Math.floor(Math.random()*20+1);
 	
-	if ( encounterNumber <= 16) {
+	if ( encounterNumber <= frequencyNum) {
 		value = "Uneventful travel, no encounters.";
 	}
 	else {
@@ -1613,14 +1613,14 @@ switch(defaultTerrainTemp) {
 
 
 	
-var morningEncounterTemp = encounterGenerator(morningEncounterTemp,defaultTerrainTemp);
+var morningEncounterTemp = encounterGenerator(morningEncounterTemp,defaultTerrainTemp,16);
 value.morningEncounter = morningEncounterTemp;
 	
 var middayEncounterTemp = "";
-value.middayEncounter = encounterGenerator(middayEncounterTemp,defaultTerrainTemp);
+value.middayEncounter = encounterGenerator(middayEncounterTemp,defaultTerrainTemp,16);
 	
 var nightEncounterTemp = "";
-value.nightEncounter = encounterGenerator(nightEncounterTemp,defaultTerrainTemp);
+value.nightEncounter = encounterGenerator(nightEncounterTemp,defaultTerrainTemp,16);
 
 
 	
@@ -1650,11 +1650,18 @@ value = {weather:"",morningEncounter:"",middayEncounter:"",nightEncounter:"",ter
 var terrainValue = 
 	$('input[name="terrainForm"]:checked').val();
 	
+// Frequency
+var encounterFrequency = 
+	$('input[name="encounterFrequency"]:checked').val();
+	
 if (terrainValue === undefined) {
 	alert("Please select a terrain.");
 }
 else {
-	
+	if (encounterFrequency === undefined) {
+	alert("Please select encounter frequency.");
+}
+	else {
 switch(terrainValue) {
 	case "beach": value.terrain = "Beach"; break;
 	case "jungle-noUndead": value.terrain = "Jungle (No Undead)"; break;
@@ -1669,14 +1676,14 @@ switch(terrainValue) {
 }
 
 	
-var morningEncounterTemp = encounterGenerator(morningEncounterTemp,terrainValue);
+var morningEncounterTemp = encounterGenerator(morningEncounterTemp,terrainValue,encounterFrequency);
 value.morningEncounter = morningEncounterTemp;
 	
 var middayEncounterTemp = "";
-value.middayEncounter = encounterGenerator(middayEncounterTemp,terrainValue);
+value.middayEncounter = encounterGenerator(middayEncounterTemp,terrainValue,encounterFrequency);
 	
 var nightEncounterTemp = "";
-value.nightEncounter = encounterGenerator(nightEncounterTemp,terrainValue);
+value.nightEncounter = encounterGenerator(nightEncounterTemp,terrainValue,encounterFrequency);
 
 
 	
@@ -1699,7 +1706,7 @@ var weatherNumber = Math.floor(Math.random()*20+1);
 }
 	
 	
-
+}
 }
 
 $(function() {
